@@ -32,6 +32,8 @@ class ProductVariant(TimeStampedModel):
     product = models.ForeignKey(Product, related_name='variants', on_delete=models.CASCADE)
     sku = models.CharField(max_length=100, unique=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
+    color = models.CharField(max_length=100, blank=True, null=True, default='')
+    dimensions = models.CharField(max_length=100)
 
     def __str__(self):
         return self.product.name
