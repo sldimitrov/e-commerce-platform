@@ -1,75 +1,189 @@
-# React + TypeScript + Vite
+# Ecommerce Client Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A production-oriented ecommerce frontend project focused on learning React architecture, Material UI 5, and scalable frontend engineering.
 
-Currently, two official plugins are available:
+## Goals
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Learn how to:
 
-## React Compiler
+* Design a scalable React application
+* Build reusable UI components with MUI 5
+* Manage server and client state correctly
+* Integrate with Django REST APIs
+* Apply production frontend practices
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+# Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Core
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* React
+* TypeScript
+* Vite
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## UI
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* Material UI 5
+* Emotion
+* MUI Theme System
+
+## Data & State
+
+* TanStack Query — server state
+* Zustand — client state
+
+## Forms
+
+* React Hook Form
+* Zod
+
+## Quality
+
+* ESLint
+* Prettier
+* Vitest
+* React Testing Library
+
+---
+
+# Architecture Principles
+
+## Server State
+
+Handled by TanStack Query:
+
+* Products
+* Categories
+* Orders
+* User data
+
+## Client State
+
+Handled by React/Zustand:
+
+* Theme
+* Modals
+* Drawers
+* UI preferences
+
+---
+
+# Roadmap
+
+## Phase 1 — Foundation
+
+Build:
+
+* React + TypeScript setup
+* MUI theme
+* Routing
+* Project structure
+* Code quality tools
+
+Learn:
+
+* Component architecture
+* Design systems
+
+---
+
+## Phase 2 — MUI 5 Practice
+
+Build reusable components:
+
+* Navbar
+* Product cards
+* Forms
+* Tables
+* Dialogs
+
+Learn:
+
+* MUI theming
+* Responsive design
+* Component composition
+
+---
+
+## Phase 3 — API Integration
+
+Connect Django REST API.
+
+Learn:
+
+* API layers
+* Error handling
+* Loading states
+* Data fetching patterns
+
+---
+
+## Phase 4 — Ecommerce Features
+
+Implement:
+
+* Product catalog
+* Search and filtering
+* Authentication
+* Cart
+* Wishlist
+* Checkout
+* Orders
+
+---
+
+## Phase 5 — Production Improvements
+
+Add:
+
+* Testing
+* Performance optimization
+* Accessibility
+* Deployment
+* Monitoring
+
+---
+
+# Folder Structure
 
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+src/
+├── app/
+├── pages/
+├── features/
+│   ├── auth/
+│   ├── products/
+│   ├── cart/
+│   └── orders/
+├── components/
+├── services/
+├── hooks/
+├── types/
+└── utils/
 ```
+
+---
+
+# Engineering Rules
+
+1. Keep components focused on one responsibility.
+2. Separate UI from business logic.
+3. Use TanStack Query for backend data.
+4. Use local state for UI behavior.
+5. Keep features independent.
+6. Add dependencies only when they solve a real problem.
+
+---
+
+# Learning Approach
+
+For every decision:
+
+1. Understand the problem.
+2. Compare solutions.
+3. Choose intentionally.
+4. Implement.
+5. Review trade-offs.
+
+The goal is not only to build a shop, but to develop frontend architecture skills.
