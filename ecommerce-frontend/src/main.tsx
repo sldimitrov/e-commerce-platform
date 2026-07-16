@@ -7,8 +7,8 @@ import Home from "./pages/Home/Home.tsx";
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
       <BrowserRouter>
-          <Routes>
-              <Route path="/" element={<Home/>} />
+          <Routes >
+            <Route path="/" element={<Home/>} />
           </Routes>
       </BrowserRouter>
   </StrictMode>,

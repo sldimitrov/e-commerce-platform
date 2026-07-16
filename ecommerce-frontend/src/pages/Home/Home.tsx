@@ -1,21 +1,11 @@
-import {Alert, Button} from "@mui/material";
-import {useState} from "react";
+import PageLayout from "../../components/ui/PageLayout/PageLayout.tsx";
 
 const Home = () => {
-    const [counter, setCounter] = useState(0)
 
     return (
-        <>
-            <h1>Home</h1>
-            <Button variant="contained" onClick={() => {
-                setCounter((prev) => prev +1)
-            }}>
-                HELLO WORLD
-            </Button>
-            <Alert variant="standard" color="info">
-              This is how many times you've clicked - {counter}!
-            </Alert>
-        </>
+        <PageLayout>
+            <span>Home Page</span>
+        </PageLayout>
     )
 }
 
